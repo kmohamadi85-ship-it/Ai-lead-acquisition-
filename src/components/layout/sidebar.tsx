@@ -13,10 +13,10 @@ import {
   GitBranch,
   Settings,
   Shield,
-  Zap,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import { Logo, LogoIcon } from "@/components/ui/logo";
 
 const navigation = [
   { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
@@ -40,22 +40,8 @@ export function Sidebar() {
       className="fixed left-0 top-0 z-40 h-screen border-r border-surface-200 bg-white dark:border-surface-800 dark:bg-surface-950 flex flex-col"
     >
       {/* Logo */}
-      <div className="flex h-16 items-center gap-3 px-4 border-b border-surface-200 dark:border-surface-800">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-brand-600 text-white">
-          <Zap className="w-5 h-5" />
-        </div>
-        <AnimatePresence>
-          {sidebarOpen && (
-            <motion.span
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: "auto" }}
-              exit={{ opacity: 0, width: 0 }}
-              className="text-body-lg font-bold text-surface-900 dark:text-white whitespace-nowrap overflow-hidden"
-            >
-              LeadForge
-            </motion.span>
-          )}
-        </AnimatePresence>
+      <div className="flex h-16 items-center px-4 border-b border-surface-200 dark:border-surface-800">
+        {sidebarOpen ? <Logo size="md" /> : <LogoIcon size="md" />}
       </div>
 
       {/* Navigation */}

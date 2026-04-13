@@ -1,7 +1,7 @@
 "use client";
 
-import { Zap } from "lucide-react";
 import Link from "next/link";
+import { Logo } from "@/components/ui/logo";
 
 export function Footer() {
   return (
@@ -9,11 +9,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white">
-                <Zap className="w-5 h-5" />
-              </div>
-              <span className="text-body-lg font-bold text-surface-900 dark:text-white">LeadForge AI</span>
+            <Link href="/">
+              <Logo size="md" />
             </Link>
             <p className="mt-4 text-body-sm text-surface-500 leading-relaxed">
               AI-powered lead acquisition that books qualified meetings on autopilot.

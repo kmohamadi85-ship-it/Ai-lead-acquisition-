@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input, Textarea } from "@/components/ui/input";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { motion, AnimatePresence } from "framer-motion";
+import { Logo } from "@/components/ui/logo";
 import {
-  Zap,
   Building2,
   Target,
   MessageSquare,
@@ -51,12 +51,7 @@ export default function OnboardingPage() {
         {/* Header */}
         <div className="border-b border-surface-200 dark:border-surface-800 bg-white dark:bg-surface-950">
           <div className="mx-auto max-w-4xl px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white">
-                <Zap className="w-5 h-5" />
-              </div>
-              <span className="text-body-lg font-bold text-surface-900 dark:text-white">LeadForge AI</span>
-            </div>
+            <Logo size="md" />
             <span className="text-body-sm text-surface-500">Step {step + 1} of {steps.length}</span>
           </div>
         </div>

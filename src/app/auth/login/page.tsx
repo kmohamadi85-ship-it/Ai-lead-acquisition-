@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { motion } from "framer-motion";
-import { Zap, Mail, Lock, ArrowRight } from "lucide-react";
+import { Mail, Lock, ArrowRight } from "lucide-react";
+import { Logo } from "@/components/ui/logo";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -31,11 +32,8 @@ export default function LoginPage() {
             animate={{ opacity: 1, y: 0 }}
             className="w-full max-w-md"
           >
-            <Link href="/" className="flex items-center gap-2.5 mb-10">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-600 text-white">
-                <Zap className="w-5 h-5" />
-              </div>
-              <span className="text-body-lg font-bold text-surface-900 dark:text-white">LeadForge AI</span>
+            <Link href="/" className="mb-10 inline-block">
+              <Logo size="md" />
             </Link>
 
             <h1 className="text-heading-xl font-bold text-surface-900 dark:text-white">Welcome back</h1>
